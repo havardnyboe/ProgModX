@@ -53,14 +53,13 @@ for i in range(len(t)):
 
 # oppg a) og b)
 ant_m = 5 # definerer antall meter jeg skal finne
-j = -1 # bruker j til å telle index og må derfor starte på -1 for at første tall skal bli 0
-for i in s:
-    tot_s += i
+for i in range(len(s)):
+    tot_s += s[i]
     if tot_s <= ant_m: # finner når partikkelen har beveget seg 5 meter
-        j += 1
+        t_etter_ant_m = t[i]
 
 print("\nPartikkelen har beveget seg totalt {:.3f} meter".format(tot_s))
-print("\nPartikkelen brukte {} sekunder på å bevege seg omtrent {} meter".format(t[j], ant_m))
+print("\nPartikkelen brukte {} sekunder på å bevege seg omtrent {} meter".format(t_etter_ant_m, ant_m))
 print("\nMaks fart var {:.3f} m/s og intraff etter {} sekunder".format(max(v), t[v.index(max(v))]))
 
 ## PLOTTING AV GRAFER ##
