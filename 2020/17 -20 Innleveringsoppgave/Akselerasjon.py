@@ -52,8 +52,8 @@ for i in range(len(t)):
     s.append(lengde_vektor(s_x, s_y, i)) # regner ut den totale strekningen og legger den til i lista
 
 # oppg a) og b)
-ant_m = 5 # definerer antall meter jeg skal finne
-for i in range(len(s)):
+ant_m = 5 # definerer antall meter jeg skal finne 
+for i in range(len(s)): 
     tot_s += s[i]
     if tot_s <= ant_m: # finner når partikkelen har beveget seg 5 meter
         t_etter_ant_m = t[i]
