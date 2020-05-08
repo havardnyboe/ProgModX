@@ -51,12 +51,12 @@ for i in range(len(t)):
 
 # oppg a) og b)
 
-tot_s = s[-1]
+tot_s = s[-1] # strekningsgrafen viser totalt tilbakelagt strekning over tid så siste element vil være den totale strekningen
 
 ant_m = 5 # definerer antall meter jeg skal finne 
 for i in range(len(s)): 
     if s[i] <= ant_m: # finner når partikkelen har beveget seg 5 meter
-        t_etter_ant_m = t[i]
+        t_etter_ant_m = t[i] # finner tiden etter at partikelen har bevegd seg 5 meter
 
 print("\nPartikkelen har beveget seg totalt {:.2f} meter".format(tot_s))
 print("\nPartikkelen brukte {:.2f} sekunder på å bevege seg omtrent {} meter".format(t_etter_ant_m, ant_m))
