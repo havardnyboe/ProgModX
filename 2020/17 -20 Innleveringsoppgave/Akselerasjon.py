@@ -18,8 +18,6 @@ s_x = [0]
 s_y = [0]
 s = []
 
-tot_s = 0 # variabel for den totale tilbakelagte strekningen 
-
 # funksjon for å regne ut lengden av en vektor
 def lengde_vektor(arr_1, arr_2, i):
     return np.sqrt(arr_1[i]**2 + arr_2[i]**2)
@@ -52,15 +50,17 @@ for i in range(len(t)):
     s.append(lengde_vektor(s_x, s_y, i)) # regner ut den totale strekningen og legger den til i lista
 
 # oppg a) og b)
+
+tot_s = s[-1]
+
 ant_m = 5 # definerer antall meter jeg skal finne 
 for i in range(len(s)): 
-    tot_s += s[i]
-    if tot_s <= ant_m: # finner når partikkelen har beveget seg 5 meter
+    if s[i] <= ant_m: # finner når partikkelen har beveget seg 5 meter
         t_etter_ant_m = t[i]
 
-print("\nPartikkelen har beveget seg totalt {:.3f} meter".format(tot_s))
-print("\nPartikkelen brukte {} sekunder på å bevege seg omtrent {} meter".format(t_etter_ant_m, ant_m))
-print("\nMaks fart var {:.3f} m/s og intraff etter {} sekunder".format(max(v), t[v.index(max(v))]))
+print("\nPartikkelen har beveget seg totalt {:.2f} meter".format(tot_s))
+print("\nPartikkelen brukte {:.2f} sekunder på å bevege seg omtrent {} meter".format(t_etter_ant_m, ant_m))
+print("\nMaks fart var {:.2f} m/s og intraff etter {:.2f} sekunder".format(max(v), t[v.index(max(v))]))
 
 ## PLOTTING AV GRAFER ##
 
