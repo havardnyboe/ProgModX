@@ -12,3 +12,4 @@ Oppgaver og prøver fra Programmering og Modellering X
     * [Eulers Metode](https://github.com/havardnyboe/ProgModX/tree/master/2020/6-7%20Eulers%20Metode)
     * [Halveringsmetoden](https://github.com/havardnyboe/ProgModX/tree/master/2020/13%20Halveringsmetoden)
     * [Importering fra .csv fil](https://github.com/havardnyboe/ProgModX/tree/master/2020/16%20Import%20fra%20.csv)
+    * [Pygame](https://github.com/havardnyboe/ProgModX/tree/master/2020/22%20Pygame)
