@@ -1,4 +1,7 @@
-import pygame, sys, random as r, numpy as np
+import pygame
+import sys
+import random as r
+import numpy as np
 
 # initierer pygame
 pygame.init()
@@ -16,13 +19,14 @@ clock = pygame.time.Clock()
 LIGHT_GRAY = (200, 200, 200)
 DARK_GRAY = pygame.Color("grey12")
 
+
 def ball_move():
     ball.x += ball_speed_x
     ball.y += ball_speed_y
 
 
 def player_move():
-    player.y += player_speed_
+    player.y += player_speed_y
 
 
 def opponent_ai():
@@ -66,6 +70,7 @@ def check_collition():
 def game_over():
     pygame.quit()
     sys.exit()
+
 
 # Lager rektangler #
 ball = pygame.Rect(screen_width / 2 - 8, screen_height / 2 - 8, 16, 16)
