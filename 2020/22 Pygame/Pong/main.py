@@ -7,7 +7,7 @@ import numpy as np
 pygame.init()
 
 # Oppsett av hovedvinduet
-screen_width = 960
+screen_width = 1100
 screen_height = 700
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Pong")
@@ -31,9 +31,9 @@ def player_move():
 
 def opponent_ai():
     global opponent_speed_y
-    if ball.top > opponent.top - 60:
+    if ball.top < opponent.top + 60 and ball.x > screen_width - screen_width / 2.5:
         opponent_speed_y = -5
-    if ball.bottom > opponent.bottom - 60:
+    elif ball.bottom > opponent.bottom - 60 and ball.x > screen_width - screen_width / 2.5:
         opponent_speed_y = 5
     opponent.y += opponent_speed_y
 
@@ -77,13 +77,8 @@ ball = pygame.Rect(screen_width / 2 - 8, screen_height / 2 - 8, 16, 16)
 player = pygame.Rect(10, screen_height / 2 - 70, 7, 120)
 opponent = pygame.Rect(screen_width - 17, screen_height / 2 - 70, 7, 120)
 
-# speed_list = []
-# for i in np.arange(5, 5.101, 0.001):
-#     speed_list.append(round(i, 1))
-#     speed_list.append(round(i * -1, 1))
-
-ball_speed_x = r.choice((5.5, -5.5))
-ball_speed_y = r.choice((5.5, -5.5))
+ball_speed_x = r.choice((5, -5))
+ball_speed_y = r.choice((5.2, -5.2))
 player_speed_y = 0
 opponent_speed_y = 0
 
